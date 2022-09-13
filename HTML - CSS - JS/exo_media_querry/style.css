@@ -1,0 +1,48 @@
+.div1{
+    background-color: red;
+    height: 100px;
+}
+.div2{
+    background-color: green;
+    height: 100px;
+}
+.div3{
+    background-color: yellow;
+    height: 100px;
+}
+.div4{
+    background-color: blue;
+    height: 100px;
+}
+#flex{
+    display: flex;
+}
+
+#flex div{
+    width: 50%;
+}
+
+h1{
+    margin: 0px;
+    padding:0px;
+}
+
+@media screen and (max-width: 600px) {
+    #container{
+        display: flex;
+        flex-direction: column;
+    }
+    #flex {
+        flex-direction: column;
+
+    }
+
+    #flex div{
+        width: 100%;
+    }
+
+    .div1{order:4;}
+    .div2{order:2;}
+    .div3{order:1;}
+    .div4{order:3;}
+}

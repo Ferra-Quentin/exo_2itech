@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation Hôtel</title>
+</head>
+<body>
+<form action="">
+    <label for="nfamille">Votre nom : <br/><input id="nfamille" name="nfamille" type="text" placeholder="nom" required></label><br/><br/>
+    <label for="prenom">Votre prénom : <br/><input type="text" name="prenom" id="prenom" placeholder="prenom" required></label><br/><br/>
+    <label for="téléphone">Votre numéro de téléphone : <br/><input id="téléphone" name="téléphone" placeholder="0606060606" type="tel" required></label><br/><br/>
+    <label for="mail">Adresse e-mail :<br/><input id="mail" name="mail" placeholder="votremail@mail.com" type="email" required></label><br/><br/>
+    <label for="ville">Sélectionner la ville :<br/>
+        <select id="ville" name="ville" required>
+            <option value="Lille">Lille</option>
+            <option value="Paris">Paris</option>
+            <option value="Bordeaux">Bordeaux</option>
+            <option value="Marseille">Marseille</option>
+            <option value="Nantes">Nantes</option>
+            <option value="Lyon">Lyon</option>
+            <option value="La Rochelle">La Rochelle</option>
+            <option value="Poitier">Poitier</option>
+            <option value="Toulouse">Toulouse</option>
+        </select>
+    </label><br/><br/>
+    <label for="date">Date d'arrivée : <br/><input id="date" name="date" type="date" required></label><br/><br/>
+    <label for="nbPersonne">Nombre de personne : <br/><input placeholder="0" id="nbPersonne" name="nbPersonne" type="number" required></label><br/><br/>
+    <label>Vos options : <br/>
+        <label for="clim"> Climatisation <input id="clim" name="option" type="checkbox" value="Climatisation"></label>
+        <label for="mini"> Mini-Bar <input id="mini" name="option" type="checkbox" value="Mini-bar"></label>
+        <label for="jacu"> Jacuzzi <input id="jacu" name="option" type="checkbox" value="Jacuzzi"></label>
+    </label><br/><br/>
+    <label for="commentaire">
+        <textarea id="commentaire" name="commentaire" placeholder="Ajouter un commentaire"></textarea>
+    </label><br/><br/>
+    <label>J'accepte les Conditions Générales de Vente (CGV)*<br/>
+        <label for="oui"><input id="oui" name="cgv" type="radio" checked>J'accepte</label>
+        <label for="non"><input id="non" name="cgv" type="radio">Je refuse</label>
+    </label><br/><br/>
+    <button id="submit" name="submit" type="submit">Envoyer ma demande</button>
+
+</form>
+
+</body>
+</html>
