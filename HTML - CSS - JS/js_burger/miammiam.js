@@ -9,14 +9,21 @@ Burger perso
 Système de commande (prompt)
  */
 
-let burgerVegi = burger[0]+' '+burger[1]+' '+burger[3]+' '+burger[4]+' '+burger[5]+' '+ burger[6]+' '+burger[7];
 
-let burgerVega= burger[0]+' '+burger[3]+' '+burger[4]+' '+burger[5]+' '+ burger[6]+' '+burger[7];
+const burgerPerso = [...burger]
 
-let burgerCarni = burger[0]+' '+burger[1]+' '+burger[2]+' '+burger[4];
+const burgerCarni = [...burger]
 
-let burgerPerso = '';
-burger.map(ingredient => burgerPerso+=ingredient);
+burgerCarni.splice(3,1)
+burgerCarni.splice(4,3)
+
+const burgerVega=[...burger]
+burgerVega.splice(1,2)
+
+const burgerVegi =[...burger]
+
+burgerVegi.splice(2,1)
+
 
 let choix = prompt('Quel menu voulez-vous ? ' +
     '(1: Végétarien, 2: Vegan, 3: Carnivore, 4: Personnel)');
