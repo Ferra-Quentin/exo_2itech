@@ -1,0 +1,114 @@
+* {
+   margin: 0;
+
+}
+body {
+   display: flex;
+   flex-direction: column;
+   font-family: 'Roboto' ;
+   font-size: 22px;
+   width:100%;
+   height: 100vh;
+   background:
+           linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6)) no-repeat;
+}
+
+#inputName{
+   font-size: 20px;
+   text-align: center;
+}
+
+#bodyForm {
+   display: flex;
+   height: 15em;
+   background: white;
+   border: 0 none;
+   border-radius: 9px;
+   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+   padding: 20px 30px;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   box-sizing: border-box;
+   width: 50%;
+   margin: 0 10%;
+}
+#formGroup {
+   width:100%;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10rem;
+   margin-bottom: 10rem;
+}
+#formInput {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+#formInput input{
+   margin: 0.5em;
+   width: 32em;
+   height: 3em;
+   border-radius: 25px;
+   border-style: none;
+   box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+button {
+   margin: 1em;
+   transition-duration: 0.4s;
+   width: 15em;
+   height: 3em;
+   background-color: red ;
+   color: white;
+   border-style: none;
+   font-size: 0.7em;
+   border-radius: 50px;
+   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+   background-color: #52bd1c;
+   color: #fafafa;
+}
+p {
+   margin: 1em;
+}
+#gameElement {
+   display: none;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 5em;
+
+}
+.bodyElementGame {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+#gameElement div {
+   margin: 2em;
+
+}
+img {
+   border-radius: 25px;
+   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.card img:hover{
+   border: 1px solid #000000;
+   color: #fafafa;
+
+}
+
+@media screen and (max-width: 750px){
+   .bodyElementGame{
+      flex-direction: column;
+   }
+}
+
+

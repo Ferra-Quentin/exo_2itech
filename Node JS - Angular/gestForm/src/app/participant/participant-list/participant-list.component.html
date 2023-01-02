@@ -1,0 +1,17 @@
+<h1 class="center">LISTE PARTICIPANT</h1>
+<a routerLink="/newparticipant">Nouveau participant</a>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m12">
+            <table>
+                <tr *ngFor="let participant of participants" (click)="goToParticipant(participant)">
+                    <td class="center" [appParticipantColorie]="participant.sexe" >{{participant.nom | uppercase}}</td>
+                    <td class="center" *ngIf="participant.prenom != ''" [appParticipantColorie]="participant.sexe">{{participant.prenom}}</td>
+                    <td class="center" *ngIf="participant.prenom == ''" [appParticipantColorie]="participant.sexe">Prénom inconnu</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

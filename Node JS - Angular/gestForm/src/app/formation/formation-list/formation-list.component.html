@@ -1,0 +1,26 @@
+<h1 class="center">LISTE FORMATION</h1>
+
+<a routerLink="/newformation">Nouvelle formation</a>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m5" *ngFor="let formation of formations" (click)="goToFormation(formation)">
+            <div class="card horizontal" appFormationCard="red">
+                <div class="card-image">
+                    <img appFormationImage [src]="formation.icon" alt="">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h4 class="center">{{formation.nom | uppercase}}</h4>
+                        <p class="center">{{formation.version}}</p>
+                        <p class="center"> {{formation.date | date:'dd/mm/Y'}}</p>
+                        <p class="center" *ngIf="formation.formateur != ''"> {{formation.formateur}}</p>
+                        <p class="center" *ngIf="formation.formateur == ''"> Formateur inconnu</p>
+                    </div>
+                    <span *ngFor="let langage of formation.langages" [class]="langage | formationLangages" class="center">{{langage}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

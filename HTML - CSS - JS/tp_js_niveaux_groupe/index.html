@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Gestion de groupe et de niveau</title>
+</head>
+<body>
+
+<h1>Données des groupes à tirer</h1>
+<div id="paramTirage">
+    <div class="param">
+        <label for="typeTirage">Type de tirage</label>
+        <select name="typeTirage" id="typeTirage" onchange="afficheNiveau()">
+            <option value="aleatoire">Tirage aléatoire</option>
+            <option value="pondere">Tirage pondéré</option>
+        </select>
+    </div>
+    <div class="param">
+        <label for="nbGroupe">Nombre de groupes dans lesquels répartir les participants</label>
+        <input name="nbGroupe" id="nbGroupe" type="number">
+    </div>
+</div>
+
+<div id="participants">
+    <h2 class="participantParam">Participants</h2>
+    <div class="participantParam" id="nomParticipant">
+        <div id="list">
+            <div class="participant">
+                <div style="width: 50%;">
+                    <label for="nomParti1">Nom</label>
+                    <input id="nomParti1" class="nomParti" type="text">
+                </div>
+                <div id="niveauPaticipant1" class="niveau" style="width: 50%;">
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant1'))">1</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant1'))">2</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant1'))">3</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant1'))">4</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant1'))">5</button>
+                </div>
+            </div>
+            <div class="participant">
+                <div style="width: 50%;">
+                    <label for="nomParti2">Nom</label>
+                    <input id="nomParti2" class="nomParti" type="text">
+                </div>
+                <div id="niveauPaticipant2"  class="niveau" style="width: 50%;">
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant2'))">1</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant2'))">2</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant2'))">3</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant2'))">4</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant2'))">5</button>
+                </div>
+            </div>
+            <div class="participant">
+                <div style="width: 50%;">
+                    <label for="nomParti3">Nom</label>
+                    <input id="nomParti3" class="nomParti" type="text">
+                </div>
+                <div id="niveauPaticipant3"  class="niveau" style="width: 50%;">
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant3'))">1</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant3'))">2</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant3'))">3</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant3'))">4</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant3'))">5</button>
+                </div>
+            </div>
+            <div class="participant">
+                <div style="width: 50%;">
+                    <label for="nomParti4">Nom</label>
+                    <input id="nomParti4" class="nomParti" type="text">
+                </div>
+                <div class="niveau" id="niveauPaticipant4" style="width: 50%;">
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant4'))">1</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant4'))">2</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant4'))">3</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant4'))">4</button>
+                    <button onclick="niveauSelected(this,document.getElementById('niveauPaticipant4'))">5</button>
+                </div>
+            </div>
+        </div>
+        <div id="addParticipant">
+            <button onclick="addOneMoreParticipant()">Ajouter un participant</button>
+        </div>
+    </div>
+</div>
+
+<button id="generate" onclick="genereteGroupe()">Générer les groupes</button>
+
+
+<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>
